@@ -9,7 +9,7 @@ var backgroundImg = document.getElementById("background-img");
 var gameResetH4 = document.getElementById("h4");
 var speedUp = document.getElementById("speedUp");
 
-let speedUpArr = [6, 14, 24, 34, 44, 54, 64, 74];
+let speedUpArr = [7, 15, 25, 35, 45, 55, 65, 75];
 let scores = 0;
 let jumps = 0;
 
@@ -25,33 +25,33 @@ if (gameWidth > 600) {
                 character.classList.add("animate");    
             }     
 
-            if (jumps > 0 && jumps <= 6) {
+            if (jumps > 0 && jumps <= 7) {
                 scores += 10;
-            } else if (jumps > 7 && jumps <= 14) {
+            } else if (jumps > 7 && jumps <= 15) {
                 scores += 20;
                 scoresPerClick.innerText = `${20}`;
                 block.style.animationDuration = "1.8s";
-            } else if (jumps > 15 && jumps <= 24) {
+            } else if (jumps > 15 && jumps <= 25) {
                 scores += 30;
                 scoresPerClick.innerText = `${30}`;
                 block.style.animationDuration = "1.6s";
-            } else if (jumps > 25 && jumps <= 34) {
+            } else if (jumps > 25 && jumps <= 35) {
                 scores += 40;
                 scoresPerClick.innerText = `${40}`;
                 block.style.animationDuration = "1.4s";
-            } else if (jumps > 35 && jumps <= 44) {
+            } else if (jumps > 35 && jumps <= 45) {
                 scores += 50;
                 scoresPerClick.innerText = `${50}`;
                 block.style.animationDuration = "1.2s";
-            } else if (jumps > 45 && jumps <= 54) {
+            } else if (jumps > 45 && jumps <= 55) {
                 scores += 60;
                 scoresPerClick.innerText = `${60}`;
                 block.style.animationDuration = "1s";
-            } else if (jumps > 55 && jumps <= 64) {
+            } else if (jumps > 55 && jumps <= 65) {
                 scores += 70;
                 scoresPerClick.innerText = `${70}`;
                 block.style.animationDuration = "0.8s";
-            } else if (jumps > 65 && jumps <= 74) {
+            } else if (jumps > 65 && jumps <= 75) {
                 scores += 80;
                 scoresPerClick.innerText = `${80}`;
                 block.style.animationDuration = "0.6s";
@@ -85,33 +85,33 @@ if (gameWidth > 600) {
             character.classList.add("animate");
         }
     
-        if (jumps > 0 && jumps <= 6) {
+        if (jumps > 0 && jumps <= 7) {
             scores += 10;
-        } else if (jumps > 7 && jumps <= 14) {
+        } else if (jumps > 7 && jumps <= 15) {
             scores += 20;
             scoresPerClick.innerText = `${20}`;
             block.style.animationDuration = "1.8s";
-        } else if (jumps > 15 && jumps <= 24) {
+        } else if (jumps > 15 && jumps <= 25) {
             scores += 30;
             scoresPerClick.innerText = `${30}`;
             block.style.animationDuration = "1.6s";
-        } else if (jumps > 25 && jumps <= 34) {
+        } else if (jumps > 25 && jumps <= 35) {
             scores += 40;
             scoresPerClick.innerText = `${40}`;
             block.style.animationDuration = "1.4s";
-        } else if (jumps > 35 && jumps <= 44) {
+        } else if (jumps > 35 && jumps <= 45) {
             scores += 50;
             scoresPerClick.innerText = `${50}`;
             block.style.animationDuration = "1.2s";
-        } else if (jumps > 45 && jumps <= 54) {
+        } else if (jumps > 45 && jumps <= 55) {
             scores += 60;
             scoresPerClick.innerText = `${60}`;
             block.style.animationDuration = "1s";
-        } else if (jumps > 55 && jumps <= 64) {
+        } else if (jumps > 55 && jumps <= 65) {
             scores += 70;
             scoresPerClick.innerText = `${70}`;
             block.style.animationDuration = "0.8s";
-        } else if (jumps > 65 && jumps <= 74) {
+        } else if (jumps > 65 && jumps <= 75) {
             scores += 80;
             scoresPerClick.innerText = `${80}`;
             block.style.animationDuration = "0.6s";

@@ -191,11 +191,16 @@ h1 {
     #cloud {
         width: 150px;
         height: 60px;
+        margin-left: 45%;
     }
 
     #game-info-container {
         font-size: 17px;
         width: 210px;
+    }
+
+    #speedUp {
+        margin-left: 15%;
     }
 
     @keyframes block {
