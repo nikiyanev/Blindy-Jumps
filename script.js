@@ -81,15 +81,13 @@ if (gameWidth > 600) {
     };
 } else {
     html.addEventListener('click', (e) => {
-        
-        if (game.style.display != "none") {
-            jumpSound()
-            jumps += 1;
-        }
 
         if(character.classList != "animate") {
             character.classList.add("animate");
         }
+
+        jumpSound()
+        jumps += 1;
     
         if (jumps > 0 && jumps <= 7) {
             scores += 10;
