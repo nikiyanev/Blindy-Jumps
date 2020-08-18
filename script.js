@@ -18,9 +18,12 @@ if (gameWidth > 600) {
         if(event.keyCode === 32) {
             event.preventDefault();
             html.click(); 
-           
-            jumps += 1;
 
+            if (game.style.display != "none") {
+                jumpSound()
+                jumps += 1;
+            }
+            
             if(character.classList != "animate") {
                 character.classList.add("animate");    
             }     
@@ -79,7 +82,10 @@ if (gameWidth > 600) {
 } else {
     html.addEventListener('click', (e) => {
         
-        jumps += 1;
+        if (game.style.display != "none") {
+            jumpSound()
+            jumps += 1;
+        }
 
         if(character.classList != "animate") {
             character.classList.add("animate");
@@ -142,10 +148,19 @@ var chekDead = setInterval(function() {
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 
     if (blockLeft < 120 && blockLeft > 80 && characterTop >= 260) {
+        // crashSound()
         game.style.display = "none";
-        // block.style.display = "none";
-        gameResetH4.style.display = "none";
+        gameResetH4.style.display = "none";   
         alert(`you lose!`);
     }
 }, 10);
 
+function jumpSound(){
+    var audio = new Audio("../sounds/jump.mp3");
+    audio.play();
+}
+
+function crashSound(){
+    var audio = new Audio("../sounds/crash.mp3");
+    audio.play();
+}

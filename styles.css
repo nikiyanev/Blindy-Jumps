@@ -191,7 +191,7 @@ h1 {
     #cloud {
         width: 150px;
         height: 60px;
-        margin-left: 45%;
+        margin-left: 50%;
     }
 
     #game-info-container {
@@ -204,7 +204,7 @@ h1 {
     }
 
     @keyframes block {
-        0%{left: 650px;}
+        0%{left: 600px;}
         100%{left: -40px;}
     }
 
