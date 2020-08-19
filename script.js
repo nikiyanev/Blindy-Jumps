@@ -3,9 +3,7 @@ var block = document.getElementById("block");
 var gameWidth = Number(document.getElementById('game').offsetWidth);
 var totalScores = document.getElementById("totalScores");
 var totalJumps = document.getElementById("totalJumps"); 
-var scoresPerClick = document.getElementById("scoresPerClick"); 
 var html = document.getElementById("html"); 
-var backgroundImg = document.getElementById("background-img");
 var gameResetH4 = document.getElementById("h4");
 var speedUp = document.getElementById("speedUp");
 
@@ -30,38 +28,57 @@ if (gameWidth > 600) {
 
             if (jumps > 0 && jumps <= 7) {
                 scores += 10;
+                if (jumps === 7) {
+                    block.style.animationDuration = "1.8s";
+                }
             } else if (jumps > 7 && jumps <= 15) {
                 scores += 20;
                 scoresPerClick.innerText = `${20}`;
-                block.style.animationDuration = "1.8s";
+                if (jumps === 15) {
+                    block.style.animationDuration = "1.6s";
+                }
             } else if (jumps > 15 && jumps <= 25) {
                 scores += 30;
                 scoresPerClick.innerText = `${30}`;
-                block.style.animationDuration = "1.6s";
+                if (jumps === 25) {
+                    block.style.animationDuration = "1.4s";
+                }
             } else if (jumps > 25 && jumps <= 35) {
                 scores += 40;
                 scoresPerClick.innerText = `${40}`;
-                block.style.animationDuration = "1.4s";
+                if (jumps === 35) {
+                    block.style.animationDuration = "1.2s";
+                }
             } else if (jumps > 35 && jumps <= 45) {
                 scores += 50;
                 scoresPerClick.innerText = `${50}`;
-                block.style.animationDuration = "1.2s";
+                if (jumps === 45) {
+                    block.style.animationDuration = "1s";
+                }
             } else if (jumps > 45 && jumps <= 55) {
                 scores += 60;
                 scoresPerClick.innerText = `${60}`;
-                block.style.animationDuration = "1s";
+                if (jumps === 55) {
+                    block.style.animationDuration = "0.8s";
+                }
             } else if (jumps > 55 && jumps <= 65) {
                 scores += 70;
                 scoresPerClick.innerText = `${70}`;
-                block.style.animationDuration = "0.8s";
+                if (jumps === 65) {
+                    block.style.animationDuration = "0.6s";
+                }
             } else if (jumps > 65 && jumps <= 75) {
                 scores += 80;
                 scoresPerClick.innerText = `${80}`;
-                block.style.animationDuration = "0.6s";
+                if (jumps === 75) {
+                    block.style.animationDuration = "0.5s";
+                }
             } else if (jumps > 75) {
                 scores += 90;
                 scoresPerClick.innerText = `${90}`;
-                block.style.animationDuration = "0.4s";
+                if (jumps === 85) {
+                    block.style.animationDuration = "0.4s";
+                }
             }      
 
             if(speedUpArr.includes(jumps)) {
@@ -91,39 +108,58 @@ if (gameWidth > 600) {
     
         if (jumps > 0 && jumps <= 7) {
             scores += 10;
+            if (jumps === 7) {
+                block.style.animationDuration = "1.8s";
+            }
         } else if (jumps > 7 && jumps <= 15) {
             scores += 20;
             scoresPerClick.innerText = `${20}`;
-            block.style.animationDuration = "1.8s";
+            if (jumps === 15) {
+                block.style.animationDuration = "1.6s";
+            }
         } else if (jumps > 15 && jumps <= 25) {
             scores += 30;
             scoresPerClick.innerText = `${30}`;
-            block.style.animationDuration = "1.6s";
+            if (jumps === 25) {
+                block.style.animationDuration = "1.4s";
+            }
         } else if (jumps > 25 && jumps <= 35) {
             scores += 40;
             scoresPerClick.innerText = `${40}`;
-            block.style.animationDuration = "1.4s";
+            if (jumps === 35) {
+                block.style.animationDuration = "1.2s";
+            }
         } else if (jumps > 35 && jumps <= 45) {
             scores += 50;
             scoresPerClick.innerText = `${50}`;
-            block.style.animationDuration = "1.2s";
+            if (jumps === 45) {
+                block.style.animationDuration = "1s";
+            }
         } else if (jumps > 45 && jumps <= 55) {
             scores += 60;
             scoresPerClick.innerText = `${60}`;
-            block.style.animationDuration = "1s";
+            if (jumps === 55) {
+                block.style.animationDuration = "0.8s";
+            }
         } else if (jumps > 55 && jumps <= 65) {
             scores += 70;
             scoresPerClick.innerText = `${70}`;
-            block.style.animationDuration = "0.8s";
+            if (jumps === 65) {
+                block.style.animationDuration = "0.6s";
+            }
         } else if (jumps > 65 && jumps <= 75) {
             scores += 80;
             scoresPerClick.innerText = `${80}`;
-            block.style.animationDuration = "0.6s";
+            if (jumps === 75) {
+                block.style.animationDuration = "0.5s";
+            }
         } else if (jumps > 75) {
             scores += 90;
             scoresPerClick.innerText = `${90}`;
-            block.style.animationDuration = "0.4s";
-        }  
+            if (jumps === 85) {
+                block.style.animationDuration = "0.4s";
+            }
+        }      
 
         if(speedUpArr.includes(jumps)) {
             speedUp.style.display = "block";
@@ -145,11 +181,20 @@ var chekDead = setInterval(function() {
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 
-    if (blockLeft < 120 && blockLeft > 80 && characterTop >= 260) {
-        // crashSound()
-        game.style.display = "none";
-        gameResetH4.style.display = "none";   
-        alert(`you lose!`);
+    if (gameWidth > 600) {
+        if (blockLeft < 120 && blockLeft > 80 && characterTop >= 260) {
+            // crashSound()
+            game.style.display = "none";
+            gameResetH4.style.display = "none";   
+            alert(`YOU LOSE!`);
+        } 
+    } else {
+        if (blockLeft < 80 && blockLeft > 40 && characterTop >= 260) {
+            // crashSound()
+            game.style.display = "none";
+            gameResetH4.style.display = "none";   
+            alert(`YOU LOSE!`);
+        } 
     }
 }, 10);
 

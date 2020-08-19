@@ -27,7 +27,7 @@ h1 {
     background-color: #36b4ee;
     align-self: center;
     overflow: hidden;
-    animation: fade 2s;
+    animation: fade 1.5s;
 }
 
 @keyframes fade {
@@ -203,6 +203,10 @@ h1 {
         margin-left: 15%;
     }
 
+    #character {
+        left: 40px;
+    }
+    
     @keyframes block {
         0%{left: 600px;}
         100%{left: -40px;}
