@@ -199,7 +199,8 @@ var chekDead = setInterval(function() {
 }, 10);
 
 function jumpSound(){
-    var audio = new Audio("../sounds/jump.mp3");
+    // var audio = new Audio("../sounds/jump.mp3");
+    var audio = new Audio("https://raw.githubusercontent.com/nikiyanev/Blindy-Jumps/master/jump.mp3"); // this is way to play audio file ot github page :)
     audio.play();
 }
 
