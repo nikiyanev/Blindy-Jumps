@@ -1,3 +1,4 @@
+
 var character = document.getElementById("character");
 var block = document.getElementById("block");
 var gameWidth = Number(document.getElementById('game').offsetWidth);
@@ -30,30 +31,35 @@ if (gameWidth > 600) {
                 scores += 10;
                 if (jumps === 7) {
                     block.style.animationDuration = "1.8s";
+                    block.style.backgroundImage = "url(images/karate-kid.svg)";
                 }
             } else if (jumps > 7 && jumps <= 15) {
                 scores += 20;
                 scoresPerClick.innerText = `${20}`;
                 if (jumps === 15) {
                     block.style.animationDuration = "1.6s";
+                    block.style.backgroundImage = "url(images/hair-head.svg)";
                 }
             } else if (jumps > 15 && jumps <= 25) {
                 scores += 30;
                 scoresPerClick.innerText = `${30}`;
                 if (jumps === 25) {
                     block.style.animationDuration = "1.4s";
+                    block.style.backgroundImage = "url(images/rock.svg)";
                 }
             } else if (jumps > 25 && jumps <= 35) {
                 scores += 40;
                 scoresPerClick.innerText = `${40}`;
                 if (jumps === 35) {
                     block.style.animationDuration = "1.2s";
+                    block.style.backgroundImage = "url(images/scary-face.svg)";
                 }
             } else if (jumps > 35 && jumps <= 45) {
                 scores += 50;
                 scoresPerClick.innerText = `${50}`;
                 if (jumps === 45) {
                     block.style.animationDuration = "1s";
+                    block.style.backgroundImage = "url(images/wolf.svg)";
                 }
             } else if (jumps > 45 && jumps <= 55) {
                 scores += 60;
@@ -110,30 +116,35 @@ if (gameWidth > 600) {
             scores += 10;
             if (jumps === 7) {
                 block.style.animationDuration = "1.8s";
+                block.style.backgroundImage = "url(images/karate-kid.svg)";
             }
         } else if (jumps > 7 && jumps <= 15) {
             scores += 20;
             scoresPerClick.innerText = `${20}`;
             if (jumps === 15) {
                 block.style.animationDuration = "1.6s";
+                block.style.backgroundImage = "url(images/hair-head.svg)";
             }
         } else if (jumps > 15 && jumps <= 25) {
             scores += 30;
             scoresPerClick.innerText = `${30}`;
             if (jumps === 25) {
                 block.style.animationDuration = "1.4s";
+                block.style.backgroundImage = "url(images/rock.svg)";
             }
         } else if (jumps > 25 && jumps <= 35) {
             scores += 40;
             scoresPerClick.innerText = `${40}`;
             if (jumps === 35) {
                 block.style.animationDuration = "1.2s";
+                block.style.backgroundImage = "url(images/scary-face.svg)";
             }
         } else if (jumps > 35 && jumps <= 45) {
             scores += 50;
             scoresPerClick.innerText = `${50}`;
             if (jumps === 45) {
                 block.style.animationDuration = "1s";
+                block.style.backgroundImage = "url(images/wolf.svg)";
             }
         } else if (jumps > 45 && jumps <= 55) {
             scores += 60;
@@ -159,7 +170,7 @@ if (gameWidth > 600) {
             if (jumps === 85) {
                 block.style.animationDuration = "0.4s";
             }
-        }      
+        }        
 
         if(speedUpArr.includes(jumps)) {
             speedUp.style.display = "block";
