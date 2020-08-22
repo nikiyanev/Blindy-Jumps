@@ -7,6 +7,7 @@ var totalJumps = document.getElementById("totalJumps");
 var html = document.getElementById("html"); 
 var gameResetH4 = document.getElementById("h4");
 var speedUp = document.getElementById("speedUp");
+var newBoss = document.getElementById("newBoss");
 
 let speedUpArr = [7, 15, 25, 35, 45, 55, 65, 75];
 let scores = 0;
@@ -89,9 +90,12 @@ if (gameWidth > 600) {
 
             if(speedUpArr.includes(jumps)) {
                 speedUp.style.display = "block";
-            } else {
-                speedUp.style.display = "none";
-            }
+                newBoss.style.display = "block";
+                setTimeout(function() {
+                    speedUp.style.display = "none";
+                    newBoss.style.display = "none";
+                }, 1800);
+            } 
             
             totalScores.innerText = `${scores}`;
             totalJumps.innerText = `${jumps}`;       
@@ -174,9 +178,12 @@ if (gameWidth > 600) {
 
         if(speedUpArr.includes(jumps)) {
             speedUp.style.display = "block";
-        } else {
-            speedUp.style.display = "none";
-        }
+            newBoss.style.display = "block";
+            setTimeout(function() {
+                speedUp.style.display = "none";
+                newBoss.style.display = "none";
+            }, 1800);
+        } 
     
         totalScores.innerText = `${scores}`;
         totalJumps.innerText = `${jumps}`;   
