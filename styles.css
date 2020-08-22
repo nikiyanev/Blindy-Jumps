@@ -151,7 +151,7 @@ h1 {
 
 @keyframes speed {
     0%{margin-top: 12%;}
-    100%{margin-top: -5%;}
+    100%{margin-top: -2%;}
 }
 
 #reset-btn {
