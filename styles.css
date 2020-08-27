@@ -57,7 +57,6 @@ h1 {
     position: absolute;
 }
 
-
 #game-info-container {
     width: 320px;
     height: 30px;
@@ -84,7 +83,7 @@ h1 {
     margin-top: 10px;
     padding: 7px 15px;
 }
-
+/* CHARACTER */
 #character {
     width: 40px;
     height: 100px;
@@ -104,23 +103,16 @@ h1 {
     70%{top: 200px;}
     100%{top: 300px;}
 }
-
+/* BLOCK */
 #block {
     width: 40px;
     height: 40px;
-    /* background-image: url("../images/scary-face.png"); */
     background-image: url("images/eye.svg");
     background-size: cover;
     position: relative;
     top: 260px;
     left: 960px;
-    animation: block 2.5s infinite linear;
     z-index: 1;
-}
-
-@keyframes block {
-    0%{left: 1100px;}
-    100%{left: -40px;}
 }
 
 #newBoss {
@@ -144,7 +136,7 @@ h1 {
 #speedUp {
     position: absolute;
     font-size: 22px;
-    color: gold;
+    color: rgb(241, 16, 16);
     margin-top: 10%;
     margin-left: 30%;
     animation: speed 1.8s linear;
@@ -154,6 +146,18 @@ h1 {
 @keyframes speed {
     0%{margin-top: 12%;}
     100%{margin-top: -2%; font-weight: bold;}
+}
+
+#alert {
+    display: none;
+    font-size: 100px;
+    align-self: center;
+}
+
+#divScoresContainer {
+    display: none;
+    font-size: 30px;
+    align-self: center;
 }
 
 #reset-btn {
@@ -231,9 +235,7 @@ h1 {
         left: 40px;
     }
 
-    @keyframes block {
-        0%{left: 600px;}
-        100%{left: -40px;}
+    #alert {
+        font-size: 80px;
     }
-
 }
