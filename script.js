@@ -31,8 +31,9 @@ window.onkeydown = function(event){
         event.preventDefault();
         html.click(); 
 
-        scores += scoresPerClick;
-
+        if (game.style.display != "none") {
+            scores += scoresPerClick;
+        }
         if (game.style.display != "none") {
             jumpSound()
             jumps += 1;
@@ -79,7 +80,9 @@ window.onkeydown = function(event){
     // --CLICK TO CHARACTER JUMP ON MOBILE--
     html.addEventListener('click', (e) => {
 
-        scores += scoresPerClick;
+        if (game.style.display != "none") {
+            scores += scoresPerClick;
+        }
 
         jumpSound()
         jumps += 1;
